@@ -7,7 +7,7 @@ export default {
         primary: "#FBC205",
       },
       gridTemplateColumns: {
-        auto: "auto-fill,minmax(200,1fr)",
+        auto: "repeat(auto-fill,minmax(300px,1fr))",
       },
     },
   },

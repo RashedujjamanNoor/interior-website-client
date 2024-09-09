@@ -9,12 +9,22 @@ const DesignServices = () => {
         DESIGN SERVICES
       </h1>
       <hr />
-      <div>
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-stretch gap-4 gap-y-4 mt-4 ">
         {items.slice(0, 3).map((item, index) => (
-          <div key={index}>
-            <img src={item.img} alt="" />
-            <h1>{item.title}</h1>
-            <p>{item.desc}</p>
+          <div
+            key={index}
+            className="border border-gray-200 shadow-md p-4 rounded-xl"
+          >
+            <img src={item.img} alt="" className="w-full" />
+            <h1 className="font-medium text-center py-3 text-lg text-gray-800">
+              {item.title}
+            </h1>
+            <p className="text-sm text-gray-600 text-justify">{item.desc}</p>
+            <div className="flex justify-center items-center mt-6">
+              <button className="bg-primary px-6 py-2 bottom-2 rounded-lg text-white">
+                Get Started!
+              </button>
+            </div>
           </div>
         ))}
       </div>
